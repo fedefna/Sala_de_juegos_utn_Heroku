@@ -1,0 +1,23 @@
+<form class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Ingresar</h1>
+
+
+    <div>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email" [(ngModel)]="us.email">
+      <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="us.password">
+    </div>
+    <small class="text-danger" *ngIf="mostrarError">Email o Contraseña incorrectos </small>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="button" (click)="signIn()" >Ingresar</button>
+    <button class="btn btn-lg btn-primary btn-block" type="button" (click)="loginGoogle()" >Ingresar con Google</button>
+    <label>Aun no tienes cuenta? <a routerLink="/register">Registrarse</a></label>
+    <p class="mt-5 mb-3 text-muted">&copy; 1992-2021</p>
+
+
+    <button type="button" (click)="completar()" >Completar user&pw</button> 
+  </form>

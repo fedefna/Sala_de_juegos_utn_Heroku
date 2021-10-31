@@ -1,0 +1,11 @@
+<form class="form-signin">
+  <h1 class="h3 mb-3 font-weight-normal">Registrarse</h1>
+
+  <input [(ngModel)]="us.nombre" type="text" id="inputNombre" class="form-control" placeholder="Nombre" required>
+  <input [(ngModel)]="us.email" type="email" id="inputEmail" class="form-control" placeholder="Email" required>
+  <input [(ngModel)]="us.password" type="password" class="form-control" placeholder="Password" required>
+  <small class="text-danger" *ngIf="mostrarError">{{errorMessage}}</small>
+  <button class="btn btn-lg btn-primary btn-block" type="button" (click)="registrarUsuario()" >Registrarse</button>
+  <label>Ya tienes una cuenta? <a routerLink="/login">Ingresar</a></label>
+  <p class="mt-5 mb-3 text-muted">&copy; 1992-2021</p>
+</form>

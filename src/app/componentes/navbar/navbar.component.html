@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="../../favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+    Sala de Juegos
+  </a>
+
+  <a *ngIf ="userLoggedIn" class="navbar-brand" routerLink="/app-chat">
+     Sala de chat
+  </a>
+
+  <div ngbDropdown class="d-inline-block" *ngIf ="userLogged|async as user; else btnLogin">
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+        <img *ngIf="user.photoURL" src="{{user.photoURL}}" width="30" style="border-radius: 100%;"  height="30" class="d-inline-block align-top" alt="">
+        {{user.displayName?user.displayName : user.email}}
+    </button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <button *ngIf ="userLoggedIn" ngbDropdownItem (click)="logOut()">Log Out</button>
+    </div>
+  </div>
+
+  
+  <ng-template #btnLogin>
+      <div class="btn-group btn-group-toggle">
+        <label type="button" class="btn-primary btn" routerLink="/login">Log In</label>
+      </div>
+  </ng-template>
+
+</nav>

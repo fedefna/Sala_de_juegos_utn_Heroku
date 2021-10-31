@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "saladejuegos-b601b": {
+      "hosting": {
+        "SalaDeJuegos": [
+          "saladejuegos-b601b"
+        ]
+      }
+    }
+  }
+}
