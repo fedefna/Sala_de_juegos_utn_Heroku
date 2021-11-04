@@ -38,4 +38,20 @@ export class NavbarComponent implements OnInit {
     })
   }
 
+  jugarAhorcado(){
+    this.router.navigate(["juegos/ahorcado"]);
+  }
+
+  jugarMayorMenor(){
+    this.router.navigate(["juegos/mayorMenor"]);
+  }
+
+  jugarPreeguntados(){
+    this.router.navigate(["juegos/preguntados"]);
+  }
+
+  jugarAdivinarPalabra(){
+    this.router.navigate(["juegos/adivinarPalabra"]);
+  }
+
 }

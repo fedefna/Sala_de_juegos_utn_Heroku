@@ -4,9 +4,17 @@
     Sala de Juegos
   </a>
 
-  <a *ngIf ="userLoggedIn" class="navbar-brand" routerLink="/app-chat">
-     Sala de chat
-  </a>
+  <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+        Juegos
+    </button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <button ngbDropdownItem (click)="jugarAhorcado()">Ahorcado</button>
+      <button ngbDropdownItem (click)="jugarMayorMenor()">Mayor/Menor</button>
+      <button ngbDropdownItem (click)="jugarPreeguntados()">Preguntados</button>
+      <button ngbDropdownItem (click)="jugarAdivinarPalabra()">Adivinar Palabra</button>
+    </div>
+  </div>
 
   <div ngbDropdown class="d-inline-block" *ngIf ="userLogged|async as user; else btnLogin">
     <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>

@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ErrorComponent } from './pages/error/error.component';
-import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
 
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
@@ -20,8 +19,9 @@ import { RegisterComponent } from './pages/register/register.component';
 import { FirebaseModule } from './firebase/firebase.module';
 import { UsuarioService } from './shared/services/usuario.service';
 import { DatePipe } from '@angular/common';
-import { ChatComponent } from './componentes/chat/chat.component';
 import { ChatService } from './shared/services/chat.service';
+import { MarvelService } from './shared/services/marvel.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,10 +29,8 @@ import { ChatService } from './shared/services/chat.service';
     HomeComponent,
     LoginComponent,
     ErrorComponent,
-    QuienSoyComponent,
     NavbarComponent,
-    RegisterComponent,
-    ChatComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +40,10 @@ import { ChatService } from './shared/services/chat.service';
     AngularFirestoreModule,
     FormsModule,
     NgbModule,
+    HttpClientModule,
     FirebaseModule
   ],
-  providers: [AuthService,UsuarioService,DatePipe,ChatService],
+  providers: [AuthService,UsuarioService,DatePipe,ChatService,MarvelService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
