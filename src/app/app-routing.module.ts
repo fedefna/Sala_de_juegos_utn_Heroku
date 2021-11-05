@@ -5,16 +5,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuard } from './shared/services/auth.guard';
+import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'error', component: ErrorComponent },
-  {
-    path: 'quien-soy',
-    loadChildren: './pages/quien-soy',
-    canActivate: [AuthGuard]
-  },
+  { path: 'quien-soy', component: QuienSoyComponent },
   {
     path: 'juegos',
     loadChildren: () => import('./juegos/juegos.module').then(m => m.JuegosModule),
