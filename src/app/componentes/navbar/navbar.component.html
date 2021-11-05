@@ -1,20 +1,38 @@
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">
-    <img src="../../favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-    Sala de Juegos
-  </a>
-
-  <div ngbDropdown class="d-inline-block">
-    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-        Juegos
-    </button>
-    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-      <button ngbDropdownItem (click)="jugarAhorcado()">Ahorcado</button>
-      <button ngbDropdownItem (click)="jugarMayorMenor()">Mayor/Menor</button>
-      <button ngbDropdownItem (click)="jugarPreeguntados()">Preguntados</button>
-      <button ngbDropdownItem (click)="jugarAdivinarPalabra()">Adivinar Palabra</button>
-    </div>
+  <div>
+    <a class="navbar-brand" href="#">
+      <img src="../../favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+      Sala de Juegos
+    </a>
   </div>
+
+  <div class="navbar-expand-lg">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+          <a class="nav-link active" type="button" (click)="goHome()">Home<span class="sr-only"></span></a>
+      </li> 
+      <li class="nav-item">
+          <a class="nav-link active" type="button" (click)="goQuienSoy()"  >Quien soy<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link active" type="button" (click)="goResultados()"  >Resultados<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <div ngbDropdown class="d-inline-block">
+          <a class="nav-link active" type="button" ngbDropdownToggle>Juegos<span class="sr-only"></span></a>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem (click)="jugarAhorcado()">Ahorcado</button>
+            <button ngbDropdownItem (click)="jugarMayorMenor()">Mayor/Menor</button>
+            <button ngbDropdownItem (click)="jugarPreeguntados()">Preguntados</button>
+            <button ngbDropdownItem (click)="jugarAdivinarPalabra()">Adivinar Palabra</button>
+          </div>
+        </div>
+      </li>
+                     
+    </ul>  
+  </div>
+
+  
 
   <div ngbDropdown class="d-inline-block" *ngIf ="userLogged|async as user; else btnLogin">
     <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>

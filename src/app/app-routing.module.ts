@@ -6,12 +6,14 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuard } from './shared/services/auth.guard';
 import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
+import { ResultadosComponent } from './pages/resultados/resultados.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'error', component: ErrorComponent },
   { path: 'quien-soy', component: QuienSoyComponent },
+  { path: 'resultados', component: ResultadosComponent },
   {
     path: 'juegos',
     loadChildren: () => import('./juegos/juegos.module').then(m => m.JuegosModule),

@@ -54,4 +54,16 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(["juegos/adivinarPalabra"]);
   }
 
+  goHome(){
+    this.router.navigate(["home"]);
+  }
+
+  goQuienSoy(){
+    this.router.navigate(["quien-soy"]);
+  }
+
+  goResultados(){
+    this.router.navigate(["resultados"]);
+  }
+
 }

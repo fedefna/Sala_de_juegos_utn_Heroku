@@ -1,0 +1,28 @@
+<div id="fondo" class="position-relative overflow-hidden">
+    <div class="container main-container mt-3">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Jugador</th>
+                    <th scope="col">Resultado</th>
+                    <th scope="col">Juego</th>
+                    <th scope="col">Fecha</th>                
+                    <th scope="col">Email</th>
+                    <th scope="col">Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let puntaje of puntajeService.puntajes">
+                    <td>{{puntaje.jugador}}</td>
+                    <td>{{puntaje.resultado}}</td>
+                    <td>{{puntaje.juego}}</td>                
+                    <td>{{puntaje.fecha | date: 'short'}}</td>                
+                    <td>{{puntaje.email}} </td>
+                    <td>{{puntaje.puntos}} &nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

@@ -22,6 +22,7 @@ import { DatePipe } from '@angular/common';
 import { ChatService } from './shared/services/chat.service';
 import { MarvelService } from './shared/services/marvel.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ResultadosComponent } from './pages/resultados/resultados.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LoginComponent,
     ErrorComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    ResultadosComponent
   ],
   imports: [
     BrowserModule,
