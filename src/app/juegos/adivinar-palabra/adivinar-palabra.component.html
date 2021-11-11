@@ -34,16 +34,16 @@
             <h1>  </h1>
           </div>
       
-          <div class="letras" *ngIf= "(!victoria) && (!derrota)">
-            <div>
+          <div class=" col" *ngIf= "(!victoria) && (!derrota)">
+            <div class="font">
                 <button class="abc" *ngFor="let letra of letrasElegidas" (click)="sacarLetra(letra)">{{letra}}</button><br>
-            </div>
-            <div>
+            </div><br>
+            <div class="font">
                 <button class="abc" *ngFor="let letra of letrasRandom" (click)="agregarLetra(letra)">{{letra}}</button>
             </div>
           </div>
   
-          <div class='d-md-flex flex-md-equal '>
+          <div class='row'>
 
               <div class="px-md-5 text-center text-white">
                 <button class="btn btn-lg btn-primary btn-block" type="button" (click)="goHome()" >Salir</button>

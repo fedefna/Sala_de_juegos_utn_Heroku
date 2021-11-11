@@ -23,6 +23,7 @@ import { ChatService } from './shared/services/chat.service';
 import { MarvelService } from './shared/services/marvel.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ResultadosComponent } from './pages/resultados/resultados.component';
+import { EncuestaComponent } from './pages/encuesta/encuesta.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ResultadosComponent } from './pages/resultados/resultados.component';
     ErrorComponent,
     NavbarComponent,
     RegisterComponent,
-    ResultadosComponent
+    ResultadosComponent,
+    EncuestaComponent
   ],
   imports: [
     BrowserModule,

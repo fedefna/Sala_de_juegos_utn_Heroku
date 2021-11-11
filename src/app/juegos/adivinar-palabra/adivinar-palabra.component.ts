@@ -8,10 +8,11 @@ import { PuntajesService } from 'src/app/shared/services/puntajes.service';
   templateUrl: './adivinar-palabra.component.html',
   styleUrls: ['./adivinar-palabra.component.css']
 })
+
 export class AdivinarPalabraComponent implements OnInit {
 
   gameName='Adivina Palabra';
-  palabrasPosibles = ['TECLADO', 'HELADERA', 'ZAPATILLA', 'AHORCADO'];
+  palabrasPosibles = ['PAPA', 'MOUSE', 'ARBOL', 'AHORCADO'];
   palabraRandom: string = '';
   palabraRandomArray: string[] = [];
   letrasRandom: string[] = [];
