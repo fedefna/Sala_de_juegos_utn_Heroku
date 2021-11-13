@@ -7,6 +7,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuard } from './shared/services/auth.guard';
 import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
 import { ResultadosComponent } from './pages/resultados/resultados.component';
+import { EncuestaComponent } from './pages/encuesta/encuesta.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'error', component: ErrorComponent },
   { path: 'quien-soy', component: QuienSoyComponent },
   { path: 'resultados', component: ResultadosComponent },
+  { path: 'encuesta', component: EncuestaComponent },
   {
     path: 'juegos',
     loadChildren: () => import('./juegos/juegos.module').then(m => m.JuegosModule),

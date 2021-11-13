@@ -8,16 +8,16 @@ import { PuntajesService } from '../../shared/services/puntajes.service';
 })
 export class ResultadosComponent implements OnInit {
 
-  
+
   elemento: any;
 
-  constructor(public puntajeService:PuntajesService) {
-    this.puntajeService.traerResultados().subscribe(()=>{
+  constructor(public puntajeService: PuntajesService) {
+    this.puntajeService.traerResultados().subscribe(() => {
       setTimeout(() => {
         this.elemento.scrollTop = this.elemento.scrollHeight;
       }, 20)
     })
-   }
+  }
 
   ngOnInit(): void {
   }

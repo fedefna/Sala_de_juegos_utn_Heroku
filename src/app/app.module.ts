@@ -13,7 +13,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { AuthService } from './shared/services/auth-service.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { FirebaseModule } from './firebase/firebase.module';
@@ -24,6 +24,7 @@ import { MarvelService } from './shared/services/marvel.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ResultadosComponent } from './pages/resultados/resultados.component';
 import { EncuestaComponent } from './pages/encuesta/encuesta.component';
+
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { EncuestaComponent } from './pages/encuesta/encuesta.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
     FirebaseModule

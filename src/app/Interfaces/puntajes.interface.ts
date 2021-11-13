@@ -1,6 +1,6 @@
-export interface Puntajes{
+export interface Puntajes {
     juego: string;
-    jugador:string,
+    jugador: string,
     resultado: string;
     puntos?: string;
     fecha?: string;

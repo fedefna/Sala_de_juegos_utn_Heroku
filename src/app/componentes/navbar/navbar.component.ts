@@ -66,4 +66,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(["resultados"]);
   }
 
+  goEncuesta(){
+    this.router.navigate(["encuesta"]);
+  }
+
 }

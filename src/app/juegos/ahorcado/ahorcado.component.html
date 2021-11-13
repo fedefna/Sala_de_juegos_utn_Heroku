@@ -11,12 +11,10 @@
   
           <div *ngIf="victoria">
             <span>Adivisnaste, felicitaciones!</span>
-            <button (click)="restart()" >Volver a jugar</button>
           </div>
         
           <div *ngIf="derrota">
-            <span>Perdiste, volve a intentarlo!</span>
-            <button (click)="restart()" >Quiero revancha!</button>
+            <span>Perdiste, volve a intentarlo! La palabra era: {{palabraRandom}}:</span>
           </div>
         
           
@@ -55,4 +53,4 @@
         <app-chat></app-chat>
       </div>
     </div>
-  </div>
+</div>
