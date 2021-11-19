@@ -13,9 +13,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'error', component: ErrorComponent },
-  { path: 'quien-soy', component: QuienSoyComponent },
-  { path: 'resultados', component: ResultadosComponent },
-  { path: 'encuesta', component: EncuestaComponent },
+  { path: 'quien-soy', component: QuienSoyComponent, canActivate: [AuthGuard] },
+  { path: 'resultados', component: ResultadosComponent, canActivate: [AuthGuard] },
+  { path: 'encuesta', component: EncuestaComponent, canActivate: [AuthGuard] },
   {
     path: 'juegos',
     loadChildren: () => import('./juegos/juegos.module').then(m => m.JuegosModule),
